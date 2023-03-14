@@ -32,4 +32,46 @@
 // console.log(sum(2, 3));
 
 
-import './styles/style.css'
+import "./styles/style.css"
+
+import handlerBr from "./template/rander.hbs";
+
+import handleArr from './template/renderArr.hbs';
+
+import handleArrSecond from './template/renderArrSecond.hbs';
+
+import handleArrThirbs from './template/renderArrThirbs.hbs';
+
+import {base, list, frameworks, libs} from "./data/hbsData";//
+
+const baseObj = handlerBr(base);
+
+
+
+const root = document.querySelector("#root");
+
+root.insertAdjacentHTML("beforeend", baseObj);
+
+const listArr = handleArr(list);
+
+console.log(listArr);
+
+root.insertAdjacentHTML('beforeend', listArr);
+
+const frameworksArr = handleArrSecond(frameworks);
+
+console.log(frameworksArr);
+
+root.insertAdjacentHTML('beforeend', frameworksArr);
+
+const libsArr = handleArrThirdLibs(libs);
+
+console.log(libsArr);
+
+root.insertAdjacentHTML('beforeend', libsArr);
+
+
+
+
+
+
