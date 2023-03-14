@@ -32,25 +32,25 @@
 // console.log(sum(2, 3));
 
 
-import "./styles/style.css"
+import './styles/style.css'
 
-import handlerBr from "./template/rander.hbs";
+import handleBr from "./template/render.hbs";
 
-import handleArr from './template/renderArr.hbs';
+import handleArr from "./template/renderArray.hbs";
 
-import handleArrSecond from './template/renderArrSecond.hbs';
+import handleArrSecond from "./template/renderArraySecond.hbs";
 
-import handleArrThirbs from './template/renderArrThirbs.hbs';
+import handleArrThirdLibs from "./template/renderArrThirdLibs.hbs";
 
-import {base, list, frameworks, libs} from "./data/hbsData";//
+import { base, list, frameworks, libs } from './data/hbsData';
 
-const baseObj = handlerBr(base);
+const baseObj = handleBr(base);
 
-
+console.log(baseObj);
 
 const root = document.querySelector("#root");
 
-root.insertAdjacentHTML("beforeend", baseObj);
+root.insertAdjacentHTML('beforeend', baseObj);
 
 const listArr = handleArr(list);
 
@@ -69,9 +69,4 @@ const libsArr = handleArrThirdLibs(libs);
 console.log(libsArr);
 
 root.insertAdjacentHTML('beforeend', libsArr);
-
-
-
-
-
 
